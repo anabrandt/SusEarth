@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rjwr6nkzbwE=",
+  "dgSpecHash": "lSmM16OhlMw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj",
+  "projectFilePath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anact\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\anact\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

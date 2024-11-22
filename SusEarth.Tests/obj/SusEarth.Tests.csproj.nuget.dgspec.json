@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anact\\source\\repos\\SusEarth.Tests\\SusEarth.Tests.csproj": {}
+    "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.Tests\\SusEarth.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj": {
+    "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj",
+        "projectUniqueName": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj",
         "projectName": "SusEarth.API",
-        "projectPath": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj",
+        "projectPath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj",
         "packagesPath": "C:\\Users\\anact\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\obj\\",
+        "outputPath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anact\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -123,14 +123,14 @@
         }
       }
     },
-    "C:\\Users\\anact\\source\\repos\\SusEarth.Tests\\SusEarth.Tests.csproj": {
+    "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.Tests\\SusEarth.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anact\\source\\repos\\SusEarth.Tests\\SusEarth.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.Tests\\SusEarth.Tests.csproj",
         "projectName": "SusEarth.Tests",
-        "projectPath": "C:\\Users\\anact\\source\\repos\\SusEarth.Tests\\SusEarth.Tests.csproj",
+        "projectPath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.Tests\\SusEarth.Tests.csproj",
         "packagesPath": "C:\\Users\\anact\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anact\\source\\repos\\SusEarth.Tests\\obj\\",
+        "outputPath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\anact\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -147,8 +147,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj": {
-                "projectPath": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj"
+              "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj": {
+                "projectPath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj"
               }
             }
           }

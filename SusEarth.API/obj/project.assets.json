@@ -10637,11 +10637,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj",
+      "projectUniqueName": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj",
       "projectName": "SusEarth.API",
-      "projectPath": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\SusEarth.API.csproj",
+      "projectPath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\SusEarth.API.csproj",
       "packagesPath": "C:\\Users\\anact\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\anact\\source\\repos\\SusEarth.API\\obj\\",
+      "outputPath": "C:\\Users\\anact\\Desktop\\Ana\\fiap\\SusEarth\\SusEarth.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\anact\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,6 @@
-﻿---
+﻿# 🌱 **SusEarth - Energia para um Futuro Sustentável**  
 
-# 🌱 **SusEarth - Energia para um Futuro Sustentável**
-
-### 💬 **Integrantes**
+### 💬 **Integrantes**  
 - **Ana Carolina Tavares** - RM552283  
 - **Vinicius Minei** - RM98486  
 - **Sofia Sprocatti** - RM99208  
@@ -10,145 +8,95 @@
 
 ---
 
-## 🌍 **Visão Geral do Projeto**
+## 🌍 **Visão Geral do Projeto**  
 
-O **SusEarth** é um sistema inovador que busca promover a sustentabilidade por meio do descarte correto de resíduos eletrônicos em estações de metrô. A API conecta os usuários a pontos de coleta (PEVs - Pontos de Entrega Voluntária), ajudando a localizar estações próximas com coletores disponíveis e incentivando práticas ambientais conscientes.
+O **SusEarth** é uma iniciativa tecnológica que combina inovação e sustentabilidade, com foco no descarte correto de resíduos eletrônicos. A API conecta usuários a Pontos de Entrega Voluntária (PEVs) localizados em estações de metrô, facilitando o acesso a soluções ambientais e promovendo práticas conscientes.  
 
-Os objetivos principais do projeto são:
-1. Facilitar o acesso à localização de PEVs em estações de metrô.
-2. Promover a conscientização sobre o impacto positivo do descarte correto de resíduos eletrônicos.
-3. Criar uma base tecnológica escalável para monitorar e otimizar o processo de descarte e coleta.
+Além disso, o projeto conta com uma **Inteligência Artificial (IA) preditiva** que, com base em dados históricos de descarte, analisa e prevê como o descarte correto pode mitigar problemas ambientais. Essa IA utiliza um modelo de aprendizado supervisionado para identificar padrões, ajudando a tomar decisões mais assertivas no planejamento e na alocação dos PEVs.  
 
 ---
-# Arquitetura SusEarth
-<div style="display:flex;">
-  <img align="center" alt="Diagrama-UML" src="arquitetura.png" >
-</div>
 
+## 🧠 **IA Preditiva no SusEarth**  
 
-## 🔧 **Endpoints Disponíveis**
+A IA preditiva foi desenvolvida para analisar grandes volumes de dados sobre descarte eletrônico e gerar insights que suportam ações estratégicas. Com um banco de dados robusto e diverso, alimentado por históricos de descarte e impactos ambientais, a IA pode:  
 
-A seguir estão os endpoints implementados e suas funcionalidades:
+1. **Prever impactos ambientais reduzidos:**  
+   Estimativa de emissões de CO₂ e resíduos tóxicos evitados pelo descarte adequado.  
 
-### **User Controller**
-Este controlador gerencia informações básicas sobre os usuários que interagem com o sistema.
+2. **Identificar padrões de descarte:**  
+   Reconhece os locais e períodos com maior demanda por PEVs.  
+
+3. **Sugerir alocação estratégica de recursos:**  
+   Auxilia na definição de novos pontos de coleta para otimizar o uso dos PEVs.  
+
+4. **Propor campanhas de conscientização:**  
+   Baseia-se nos dados para sugerir regiões prioritárias para campanhas educativas.  
+
+---
+
+# Arquitetura SusEarth  
+<div style="display:flex;">  
+  <img align="center" alt="Diagrama-UML" src="arquitetura.png">  
+</div>  
+
+---
+
+## 🔧 **Endpoints Disponíveis**  
+
+A API oferece funcionalidades integradas para facilitar a gestão de PEVs e suportar o funcionamento da IA.  
+
+### **User Controller**  
+Gerencia os usuários que interagem com o sistema.  
 
 - **`GET /api/User/{id}`**  
   Obtém os detalhes de um usuário específico pelo ID.  
-  **Exemplo de resposta:**  
-  ```json
-  {
-    "id": 1,
-    "name": "João Silva",
-    "email": "joao.silva@email.com"
-  }
-  ```
-
 - **`POST /api/User`**  
   Adiciona um novo usuário ao sistema.  
-  **Exemplo de corpo da requisição:**  
-  ```json
-  {
-    "name": "João Silva",
-    "email": "joao.silva@email.com"
-  }
-  ```
 
 ---
 
-### **WasteInfo Controller**
-Este controlador é o núcleo da API, fornecendo informações relacionadas aos PEVs nas estações de metrô.
+### **WasteInfo Controller**  
+Fornece informações sobre os PEVs em estações de metrô.  
 
 - **`GET /api/WasteInfo/findNearestMetro/{cep}`**  
   Retorna a estação de metrô mais próxima de um endereço (identificado pelo CEP).  
-  **Exemplo de resposta:**  
-  ```json
-  {
-    "station": "Sé",
-    "address": "Praça da Sé, São Paulo - SP",
-    "distance": "1.2km"
-  }
-  ```
-
-- **`GET /api/WasteInfo/find-cep/{cep}`**  
-  Retorna informações detalhadas sobre PEVs disponíveis no CEP informado.  
-  **Exemplo de resposta:**  
-  ```json
-  {
-    "cep": "01001-000",
-    "stations": [
-      {
-        "station": "Sé",
-        "pevCapacity": "80%",
-        "acceptedWaste": ["pilhas", "baterias", "celulares"]
-      }
-    ]
-  }
-  ```
-
 - **`POST /api/WasteInfo`**  
-  Permite adicionar informações de novos PEVs ao sistema.  
-  **Exemplo de corpo da requisição:**  
-  ```json
-  {
-    "station": "Luz",
-    "pevCapacity": "100%",
-    "acceptedWaste": ["pilhas", "baterias", "câmeras"]
-  }
-  ```
+  Adiciona informações de novos PEVs.  
 
 ---
 
-## 🛠 **Como Testar a API**
-
-### 1. Clone o repositório
-Baixe o projeto na sua máquina:
-```bash
-git clone https://github.com/anabrandt/susearth.git
-```
-
-### 2. Restaure as dependências
-No terminal, navegue até o diretório do projeto e rode:
-```bash
-dotnet restore
-```
-
-### 3. Configure o banco de dados
-Certifique-se de inserir os detalhes da conexão no arquivo **appsettings.json**.
-
-### 4. Execute o servidor
-Inicie o servidor com:
-```bash
-dotnet run
-```
-
-A API estará disponível no endereço `https://localhost:7187`.
+A **Inteligência Artificial (IA)** no **SusEarth** é utilizada para otimizar o processo de descarte de resíduos eletrônicos. A IA analisa dados históricos de descarte, identificando padrões e previsões sobre quando e onde os resíduos serão descartados. Com isso, é possível alocar estrategicamente os **Pontos de Entrega Voluntária (PEVs)**, melhorar a logística de coleta e propor campanhas de conscientização em áreas com baixo engajamento. A IA também calcula o impacto ambiental evitado com o descarte correto, promovendo um sistema mais eficiente e sustentável.
 
 ---
 
-## 📝 **Documentação da API**
+## 🛠 **Como Testar o Sistema**  
 
-Acesse a documentação interativa com o **Swagger**:  
-[Swagger UI - SusEarth](https://localhost:7187/swagger/index.html)  
+### 1. Clone o repositório  
+```bash  
+git clone https://github.com/anabrandt/susearth.git  
+```  
 
-Nela, você pode testar os endpoints e explorar as funcionalidades diretamente no navegador.
+### 2. Instale as dependências  
+```bash  
+dotnet restore  
+```  
 
----
+### 3. Execute o servidor  
+```bash  
+dotnet run  
+```  
 
-## 📦 **Planejamento Futuro**
-
-Embora a API atual seja funcional para busca e gestão de PEVs, o projeto tem potencial para incorporar as seguintes melhorias:
-1. **Monitoramento em tempo real:**  
-   Implementação de dispositivos IoT para acompanhar a ocupação dos PEVs.
-2. **Notificações personalizadas:**  
-   Alerta para usuários sobre PEVs próximos com capacidade disponível.
-3. **Painel administrativo:**  
-   Interface para que os gestores analisem dados sobre a ocupação e eficiência do projeto.
-4. **Expansão geográfica:**  
-   Escalabilidade para abranger mais locais além das estações de metrô de São Paulo.
+A API estará disponível em `https://localhost:7201`.  
 
 ---
 
-## 📝 **Conclusão**
+## 📝 **Documentação da API**  
 
-O **SusEarth** é um projeto que alia tecnologia e sustentabilidade para enfrentar os desafios do descarte de resíduos eletrônicos. Nossa API é um primeiro passo para conectar pessoas a soluções práticas e promover um futuro mais verde e consciente.
+Acesse a documentação interativa com o **Swagger** para explorar e testar os endpoints:  
+[Swagger UI - SusEarth](https://localhost:7201/swagger/index.html)  
+
+---  
+
+## 📝 **Conclusão**  
+
+O **SusEarth** não é apenas uma solução para descarte de resíduos eletrônicos, mas uma plataforma que une **tecnologia, sustentabilidade e inteligência artificial** para criar um impacto positivo no mundo. Este é apenas o começo de um futuro mais verde e inteligente!  
