@@ -20,6 +20,11 @@ Os objetivos principais do projeto são:
 3. Criar uma base tecnológica escalável para monitorar e otimizar o processo de descarte e coleta.
 
 ---
+# Arquitetura SusEarth
+<div style="display:flex;">
+  <img align="center" alt="Diagrama-UML" src="arquitetura.png" >
+</div>
+
 
 ## 🔧 **Endpoints Disponíveis**
 
