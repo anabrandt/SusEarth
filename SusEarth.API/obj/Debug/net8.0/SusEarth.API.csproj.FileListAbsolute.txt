@@ -192,6 +192,7 @@ C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\SusEarth.API.MvcApplic
 C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\SusEarth.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\SusEarth.API.RazorAssemblyInfo.cache
 C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\SusEarth.API.RazorAssemblyInfo.cs
+C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\SusEarth.API.sourcelink.json
 C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\SusEarth.1068C2A1.Up2Date
 C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\SusEarth.API.dll
 C:\Users\anact\source\repos\SusEarth.API\obj\Debug\net8.0\refint\SusEarth.API.dll
