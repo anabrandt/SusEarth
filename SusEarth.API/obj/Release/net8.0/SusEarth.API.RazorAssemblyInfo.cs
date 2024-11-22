@@ -11,13 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SusEarth.API")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+142ddc95411b93e5264e939c6c28c4795d054420")]
-[assembly: System.Reflection.AssemblyProductAttribute("SusEarth.API")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SusEarth.API")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.RelatedAssemblyAttribute("SusEarth.API.Views")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorLanguageVersionAttribute("2.1")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorConfigurationNameAttribute("MVC-2.1")]
+[assembly: Microsoft.AspNetCore.Razor.Hosting.RazorExtensionAssemblyNameAttribute("MVC-2.1", "Microsoft.AspNetCore.Mvc.Razor.Extensions")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 

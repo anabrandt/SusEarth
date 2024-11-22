@@ -1,159 +1,149 @@
 ﻿---
 
+# 🌱 **SusEarth - Energia para um Futuro Sustentável**
+
 ### 💬 **Integrantes**
-
-
-- **Ana Carolina Tavares** - RM552283
-- **Vinicius Minei** - RM98486
-- **Sofia Sprocatti** - RM99208
-- **Gabriel Lopes Pereira** - RM98023
-
----
-
-```markdown
-# 🌱 **SusEarth - Energia para um Futuro Sustentável** 
+- **Ana Carolina Tavares** - RM552283  
+- **Vinicius Minei** - RM98486  
+- **Sofia Sprocatti** - RM99208  
+- **Gabriel Lopes Pereira** - RM98023  
 
 ---
 
 ## 🌍 **Visão Geral do Projeto**
 
-O **SusEarth** é uma solução inovadora para o gerenciamento do descarte de resíduos eletrônicos. Através do uso de tecnologias como IoT, inteligência artificial generativa e uma plataforma inteligente, buscamos promover a sustentabilidade e facilitar a conscientização sobre o impacto do descarte inadequado desses resíduos.
+O **SusEarth** é um sistema inovador que busca promover a sustentabilidade por meio do descarte correto de resíduos eletrônicos em estações de metrô. A API conecta os usuários a pontos de coleta (PEVs - Pontos de Entrega Voluntária), ajudando a localizar estações próximas com coletores disponíveis e incentivando práticas ambientais conscientes.
 
-Com a ajuda de dispositivos IoT, o projeto permite monitorar e rastrear os resíduos, incentivando o descarte correto e otimizando o processo de coleta com base nas necessidades locais.
-
----
-
-## 💡 **Objetivo do Projeto**
-
-Desenvolver uma plataforma inteligente que:
-- Facilite o **descarte correto de resíduos eletrônicos**.
-- Promova a **conscientização ambiental** e práticas sustentáveis.
-- Forneça **análises preditivas** utilizando **IA generativa**.
-- Utilize **design patterns** para garantir a manutenibilidade e eficiência do código.
-
-### 🌿 **Tecnologias Utilizadas:**
-- **Inteligência Artificial Generativa** para sugestões e melhorias contínuas.
-- **.NET Core** para o desenvolvimento da API e lógica de negócios.
-- **Swagger** para documentação da API.
-- **MongoDB/Oracle** para armazenamento e gestão de dados.
-- **XUnit e Moq** para garantir que a solução seja robusta por meio de testes automatizados.
+Os objetivos principais do projeto são:
+1. Facilitar o acesso à localização de PEVs em estações de metrô.
+2. Promover a conscientização sobre o impacto positivo do descarte correto de resíduos eletrônicos.
+3. Criar uma base tecnológica escalável para monitorar e otimizar o processo de descarte e coleta.
 
 ---
 
-## 🏙 **Apoio à Sustentabilidade:**
+## 🔧 **Endpoints Disponíveis**
 
-O **SusEarth** está alinhado com as iniciativas de sustentabilidade da cidade de São Paulo, que já realiza a coleta de **lixos eletrônicos** em pontos específicos da cidade, como parte de um esforço para promover o descarte correto de resíduos e incentivar práticas que contribuam para a preservação ambiental. 🌎✨
+A seguir estão os endpoints implementados e suas funcionalidades:
+
+### **User Controller**
+Este controlador gerencia informações básicas sobre os usuários que interagem com o sistema.
+
+- **`GET /api/User/{id}`**  
+  Obtém os detalhes de um usuário específico pelo ID.  
+  **Exemplo de resposta:**  
+  ```json
+  {
+    "id": 1,
+    "name": "João Silva",
+    "email": "joao.silva@email.com"
+  }
+  ```
+
+- **`POST /api/User`**  
+  Adiciona um novo usuário ao sistema.  
+  **Exemplo de corpo da requisição:**  
+  ```json
+  {
+    "name": "João Silva",
+    "email": "joao.silva@email.com"
+  }
+  ```
 
 ---
 
-## 🔧 **Estrutura do Projeto**
+### **WasteInfo Controller**
+Este controlador é o núcleo da API, fornecendo informações relacionadas aos PEVs nas estações de metrô.
 
-O projeto segue uma arquitetura modular e escalável, com foco em **Clean Code** e **boas práticas de desenvolvimento**. A estrutura do código inclui:
+- **`GET /api/WasteInfo/findNearestMetro/{cep}`**  
+  Retorna a estação de metrô mais próxima de um endereço (identificado pelo CEP).  
+  **Exemplo de resposta:**  
+  ```json
+  {
+    "station": "Sé",
+    "address": "Praça da Sé, São Paulo - SP",
+    "distance": "1.2km"
+  }
+  ```
 
-- **API** em **.NET Core** para gerenciamento dos dados.
-- **Banco de Dados** (Oracle/MongoDB) para armazenamento de informações.
-- **IoT** para rastreamento de resíduos em tempo real.
-- **Testes automatizados** para garantir a confiabilidade da aplicação.
+- **`GET /api/WasteInfo/find-cep/{cep}`**  
+  Retorna informações detalhadas sobre PEVs disponíveis no CEP informado.  
+  **Exemplo de resposta:**  
+  ```json
+  {
+    "cep": "01001-000",
+    "stations": [
+      {
+        "station": "Sé",
+        "pevCapacity": "80%",
+        "acceptedWaste": ["pilhas", "baterias", "celulares"]
+      }
+    ]
+  }
+  ```
+
+- **`POST /api/WasteInfo`**  
+  Permite adicionar informações de novos PEVs ao sistema.  
+  **Exemplo de corpo da requisição:**  
+  ```json
+  {
+    "station": "Luz",
+    "pevCapacity": "100%",
+    "acceptedWaste": ["pilhas", "baterias", "câmeras"]
+  }
+  ```
 
 ---
 
 ## 🛠 **Como Testar a API**
 
-Para testar a API do **SusEarth**, siga os seguintes passos:
-
-### 1. **Clone o repositório:**
-
+### 1. Clone o repositório
+Baixe o projeto na sua máquina:
 ```bash
 git clone https://github.com/anabrandt/susearth.git
 ```
 
-### 2. **Instale as dependências:**
-
-Abra o terminal e navegue até o diretório do projeto. Execute o comando abaixo para restaurar as dependências do projeto:
-
+### 2. Restaure as dependências
+No terminal, navegue até o diretório do projeto e rode:
 ```bash
 dotnet restore
 ```
 
-### 3. **Configure o banco de dados:**
+### 3. Configure o banco de dados
+Certifique-se de inserir os detalhes da conexão no arquivo **appsettings.json**.
 
-A API está configurada para utilizar o banco de dados **Oracle**. Certifique-se de configurar as credenciais no arquivo **appsettings.json** com as informações corretas de acesso.
-
-```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "User Id=xxxxx;Password=xxxxxx;Data Source=xxxxxx/xxxx"
-  }
-}
-```
-
-### 4. **Execute o Projeto:**
-
-Para rodar o projeto em sua máquina local, use o comando:
-
+### 4. Execute o servidor
+Inicie o servidor com:
 ```bash
 dotnet run
 ```
 
-A API estará disponível em `https://localhost:7187`.
+A API estará disponível no endereço `https://localhost:7187`.
 
 ---
 
-## 📝 **Documentação das APIs**
+## 📝 **Documentação da API**
 
-A documentação da API foi gerada automaticamente utilizando **Swagger**. Para acessar a documentação, basta acessar a URL:
+Acesse a documentação interativa com o **Swagger**:  
+[Swagger UI - SusEarth](https://localhost:7187/swagger/index.html)  
 
-```
-https://localhost:7187/swagger
-```
-
-Na interface do Swagger, você pode visualizar todos os endpoints disponíveis e realizar testes diretamente pela interface.
+Nela, você pode testar os endpoints e explorar as funcionalidades diretamente no navegador.
 
 ---
 
-## 🔍 **Testando os Endpoints no Postman**
+## 📦 **Planejamento Futuro**
 
-Você pode usar o **Postman** para testar os endpoints da API. Siga as etapas abaixo:
-
-1. Importe o arquivo Swagger ou adicione a URL da documentação (exemplo: `https://localhost:7187/swagger/v1/swagger.json`).
-2. Selecione um endpoint da lista.
-3. Clique em **Send** para testar a API.
-4. Visualize a resposta da API e verifique os resultados.
-
----
-
-## 📦 **Testes Automatizados**
-
-Os testes unitários foram implementados utilizando **xUnit** e **Moq** para garantir a qualidade e o bom funcionamento da aplicação.
-
-### Executar os testes:
-
-```bash
-dotnet test
-```
-
----
-
-## 🧹 **Práticas de Clean Code**
-
-O código segue as melhores práticas de **Clean Code**, visando tornar o desenvolvimento mais claro e sustentável. Isso inclui:
-- **Nomes claros e concisos** para métodos e variáveis.
-- **Evitar duplicação de código** (DRY - Don't Repeat Yourself).
-- **Testabilidade**: o código foi projetado para ser testável desde o início.
-- **Documentação**: o código contém comentários explicativos e a documentação da API foi gerada automaticamente utilizando Swagger.
-
----
-
-## 🎯 **Design Patterns Utilizados**
-
-No desenvolvimento do **SusEarth**, utilizamos o padrão **Repository** para separar a lógica de acesso aos dados da lógica de negócios e facilitar a manutenção. O uso de design patterns garante que a aplicação seja escalável e fácil de estender.
+Embora a API atual seja funcional para busca e gestão de PEVs, o projeto tem potencial para incorporar as seguintes melhorias:
+1. **Monitoramento em tempo real:**  
+   Implementação de dispositivos IoT para acompanhar a ocupação dos PEVs.
+2. **Notificações personalizadas:**  
+   Alerta para usuários sobre PEVs próximos com capacidade disponível.
+3. **Painel administrativo:**  
+   Interface para que os gestores analisem dados sobre a ocupação e eficiência do projeto.
+4. **Expansão geográfica:**  
+   Escalabilidade para abranger mais locais além das estações de metrô de São Paulo.
 
 ---
 
 ## 📝 **Conclusão**
 
-O **SusEarth** é um projeto inovador e importante para a promoção de práticas sustentáveis e o descarte responsável de resíduos eletrônicos. Estamos comprometidos com a qualidade do código, boas práticas de desenvolvimento e sustentabilidade.
-
-
-**Agradecemos o seu interesse pelo projeto!Let's Rock The Future 🌱🌍**
-```
+O **SusEarth** é um projeto que alia tecnologia e sustentabilidade para enfrentar os desafios do descarte de resíduos eletrônicos. Nossa API é um primeiro passo para conectar pessoas a soluções práticas e promover um futuro mais verde e consciente.
