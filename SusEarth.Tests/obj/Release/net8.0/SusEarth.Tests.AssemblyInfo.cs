@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SusEarth.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+142ddc95411b93e5264e939c6c28c4795d054420")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87a35588d97a7098d476a27ca2502acb63b2b502")]
 [assembly: System.Reflection.AssemblyProductAttribute("SusEarth.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SusEarth.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

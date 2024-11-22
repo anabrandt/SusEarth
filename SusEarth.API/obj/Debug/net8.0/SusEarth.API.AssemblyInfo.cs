@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SusEarth.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4709b4d34e5568e21ee731909cb1b1500944549")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87a35588d97a7098d476a27ca2502acb63b2b502")]
 [assembly: System.Reflection.AssemblyProductAttribute("SusEarth.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SusEarth.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
